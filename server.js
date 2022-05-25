@@ -11,7 +11,7 @@ const morgan = require('morgan');
 
 //////////////
 // EXPRESS APP
-/////////////
+//////////////
 const app = express(); //handles express functions
 const PORT = process.env.PORT || 3001;
 
