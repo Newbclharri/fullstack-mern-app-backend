@@ -44,6 +44,17 @@ app.get("/people", async (req, res) => {
     }
 });
 
+//delete
+app.delete("/people/:id", async (req, res) =>{
+    try{
+        const id = req.params.id;
+        await People.findByIdAndDelete(id);
+        res.json(await People.find({}));
+    }catch(err){
+        res.status(400).json(err);
+    }
+});
+
 //create
 app.post("/seed", async (req, res) =>{
     try{
