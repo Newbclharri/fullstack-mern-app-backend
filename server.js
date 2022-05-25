@@ -81,7 +81,7 @@ app.post("/seed", async (req, res) =>{
 app.get("/people/:id", async (req, res) =>{
     try{
         const id = req.params.id;
-        res.json(await People.findById(id))
+        res.json(await People.findById(id));
     }catch(err){
         res.status(400).json(err);
     }
